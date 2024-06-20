@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lotery</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="lotery.html">Lotery</a></li>
+            <li><a href="password.html">Password Generator</a></li>
+        </ul>
+    </nav>
+    <div>
+        <h2>Lotery</h2>
+        <div>
+            <label>
+                Number of participants:
+                <input type="number" id="participants" />
+            </label>
+        </div>
+        <div>
+            <label>
+                Number of winners:
+                <input type="number" id="winners" />
+            </label>
+        </div>
+        <button onclick="startLotery()">Start</button>
+        <div>
+            <h3>Winners:</h3>
+            <ul id="result"></ul>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
