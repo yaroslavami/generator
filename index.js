@@ -19,7 +19,6 @@ function generatePassword() {
     const includeNumbers = document.getElementById('numbers').checked;
     const includeLowercase = document.getElementById('lowercase').checked;
     const includeUppercase = document.getElementById('uppercase').checked;
-    const includeUnique = document.getElementById('unique').checked;
     const passwordElement = document.getElementById('password');
 
     let charSet = '';
@@ -27,9 +26,6 @@ function generatePassword() {
     if (includeLowercase) charSet += 'abcdefghijklmnopqrstuvwxyz';
     if (includeUppercase) charSet += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 
-    if (includeUnique) {
-        charSet = [...new Set(charSet)].join('');
-    }
 
     const numStrings = 1;  
     const passUrl = `https://www.random.org/strings/?num=${numStrings}&len=${length}&digits=${includeNumbers ? 'on' : 'off'}&upperalpha=${includeUppercase ? 'on' : 'off'}&loweralpha=${includeLowercase ? 'on' : 'off'}&unique=${includeUnique ? 'on' : 'off'}&format=plain&rnd=new`;
